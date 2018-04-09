@@ -1,22 +1,24 @@
 {
   "manifest_version": 2,
   "version": "0.0.7",
-  "name": "Chrome extension template",
-  "description": "Chrome extension template",
+  "name": "ISAN mon",
+  "description": "ISAN mon",
   "browser_action": {
     "default_icon": "img/icon.png",
     "default_popup": "html/popup.html",
-    "default_title":"Chrome extension template"
+    "default_title":"ISAN mon"
   },
   "background": {
     "scripts": [
+      "js/socket.io-1.2.0.js",
+      "js/ionic.js",
       "js/jquery.min.js",
       "js/background.js"
     ]
   },
   "content_scripts": [
     {
-      "js": ["js/jquery.min.js", "js/content.js"],
+      "js": [ "js/socket.io-1.2.0.js", "js/ionic.js", "js/jquery.min.js", "js/content.js"],
       "matches": ["*://*/*"],
       "run_at": "document_start"
     }
